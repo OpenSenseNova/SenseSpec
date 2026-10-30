@@ -1,0 +1,3 @@
+[submodule "vllm4spec"]
+	path = vllm4spec
+	url = https://github.com/OpenSenseNova/vllm4spec.git

@@ -1,0 +1,154 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.o
+*.obj
+*.a
+
+# CMake / Ninja build intermediates
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+build.ninja
+.ninja_deps
+.ninja_log
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.whl
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.venv/
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+cache/
+outputs/
+running_logs/
+.cursor/
+_sglang/
+_tokenspeed/
+wandb/log.txt
+
+.claude/
+wandb/
+/data/
+profiles/
+.tmp
+
+# Local datasets and agent temporary files
+/mydata/
+/models/
+/.codex-tmp/
+
+# Local build/validation evidence and backups
+/logs/
+/backups/
+
+# GitHub repository configuration
+/.github/
+
+# Local verification reports
+/examples/**/verification*.json
+/examples/**/*-verification.json
+
+# GPU compilation caches
+.triton/
+.nv/
+.torch_extensions/
+
+# Training checkpoints, debug dumps and profiler output
+/checkpoints/
+/debug_dumps/
+*.safetensors
+*.distcp
+*.pt
+*.pth
+*.ckpt
+pytorch_model*.bin
+events.out.tfevents.*
+*.pt.trace.json
+*.pt.trace.json.gz
+*.nsys-rep
+*.ncu-rep
+
+# Runtime temporary files
+*.pid
+*.pid.lock
+nohup.out
+/tmp/

@@ -1,0 +1,49 @@
+# Linux x86_64 / Python 3.12 / H800-H100 (SM90).
+# Build the bundled vLLM source with tools/vllm_build.sh first; do not add a PyPI
+# vllm requirement here. Run pip/uv pip install -r requirements.txt from the
+# repository root. This also installs the project's automatic runtime setup;
+# runtime settings are applied automatically when training starts.
+# Shared vLLM requirements remain owned by the matching source checkout.
+-r vllm4spec/requirements/common.txt
+-r vllm4spec/requirements/build/cuda.txt
+
+# Core versions used by the source build and Loop/mHC training validation.
+torch==2.13.0
+cuda-toolkit[nvcc,cccl]==13.0.3.0
+numpy==2.3.5
+transformers==5.16.1
+datasets==4.7.0
+ray==2.58.0
+mooncake-transfer-engine==0.3.13.post1
+omegaconf==2.3.0
+wandb==0.30.0
+
+# Remaining dependencies declared by the training package.
+accelerate>=1.10,<2
+qwen-vl-utils>=0.0.14,<0.1
+
+# CUDA runtime dependencies of the bundled vLLM snapshot.
+# flashinfer-cubin is optional: FlashInfer can JIT kernels, as in our tested
+# environment. It is not a dependency of the built vLLM package.
+torchaudio==2.11.0
+torchvision==0.28.0
+torchcodec==0.16.0
+PyNvVideoCodec==2.0.4
+numba==0.65.0
+flashinfer-python[cu13]==0.6.17
+apache-tvm-ffi==0.1.11
+tilelang==0.1.12
+nvidia-cudnn-frontend==1.28.0
+nvtx==0.2.15
+fastsafetensors==0.3.3
+nvidia-cutlass-dsl[cu13]==4.6.2
+quack-kernels==0.6.4
+tokenspeed-mla==0.1.8
+humming-kernels[cu13]==0.1.12
+
+# Local full-data metrics and plots.
+matplotlib==3.11.2
+tensorboard==2.21.0
+
+# Install the training entry point and runtime setup in the same environment.
+-e .
